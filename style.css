@@ -39,6 +39,6 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 border: 1px solid white;
-padding: 0.2em 0.8em;
+padding: 26px 24px;
 font-size: 3rem;
 }
