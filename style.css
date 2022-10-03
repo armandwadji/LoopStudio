@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-header{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url("./img/mobile/image-hero.jpg") no-repeat center top;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{ 
+   background: none; 
+}
+
+.menu{
+    display: none;
+}
+
+.page-title{
+position: absolute;
+color: white;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 1px solid white;
+padding: 0.2em 0.8em;
+font-size: 3rem;
+}
