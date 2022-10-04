@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   color: white;
@@ -18,26 +14,90 @@ h2 {
   text-align: center;
 }
 
-.main-header {
-  position: relative;
+img {
+  display: block;
+}
+
+.hero {
   height: 100vh;
   width: 100vw;
   background: url("./img/mobile/image-hero.jpg") no-repeat center top;
   background-size: cover;
+}
+.hero .main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 40px 24px;
 }
-.main-header .logo {
+.hero .main-header .logo {
   background: none;
+  z-index: 1;
 }
-.main-header .main-nav .toggle-menu {
+.hero .main-header .main-nav {
+  align-items: center;
+}
+.hero .main-header .main-nav .toggle-menu {
   background-color: transparent;
+  cursor: pointer;
 }
-.main-header .main-nav .menu {
+@media (min-width: 700px) {
+  .hero .main-header .main-nav .toggle-menu {
+    display: none;
+  }
+}
+.hero .main-header .main-nav .menu-container {
+  left: 0;
+  top: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+@media (max-width: 700px) {
+  .hero .main-header .main-nav .menu-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+@media (min-width: 700px) {
+  .hero .main-header .main-nav .menu-container {
+    background: transparent;
+  }
+}
+.hero .main-header .main-nav .menu-container.show {
   display: none;
 }
-.main-header .page-title {
+@media (min-width: 700px) {
+  .hero .main-header .main-nav .menu-container.show {
+    display: block;
+  }
+}
+.hero .main-header .main-nav .menu-container .menu {
+  margin-left: 24px;
+}
+@media (min-width: 700px) {
+  .hero .main-header .main-nav .menu-container .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero .main-header .main-nav .menu-container .menu-item {
+  margin: 24px auto;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media (min-width: 700px) {
+  .hero .main-header .main-nav .menu-container .menu-item {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+}
+
+.page-title {
   position: absolute;
   color: white;
   top: 50%;
@@ -48,6 +108,7 @@ h2 {
   font-size: 3rem;
   width: 90%;
   max-width: 650px;
+  z-index: -2;
 }
 
 .slogan {
@@ -83,6 +144,7 @@ h2 {
   margin-bottom: 48px;
 }
 .creation--article {
+  background-color: red;
   position: relative;
   margin-bottom: 24px;
 }
@@ -132,9 +194,11 @@ h2 {
 }
 .footer--right__social-media {
   margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
 }
 .footer--right__social-media a {
-  margin: auto 16px;
+  margin: auto 10px;
 }
 .footer--right p {
   color: white;

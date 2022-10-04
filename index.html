@@ -6,36 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoopStudios</title>
 
-    <!-- fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-
     <!-- CSS -->
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./helper.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="main-header">
-      <div>
-        <a href="#">
-          <img src="./img/logo.svg" alt="logo" class="logo" />
+    <header class="hero">
+      <!-- Header -->
+      <div class="main-header">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <img src="./img/logo.svg" alt="logo" />
         </a>
-      </div>
 
-      <nav class="main-nav">
-        <button type="button" class="toggle-menu">
-          <img src="./img/icon-hamburger.svg" alt="" />
-        </button>
-        <ul class="menu">
-          <li class="menu-item"><a href="#" class="menu-link">About</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Careers</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Events</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Products</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
-        </ul>
-      </nav>
+        <!-- nav -->
+        <nav class="main-nav">
+          <button type="button" class="toggle-menu">
+            <img src="./img/icon-hamburger.svg" alt="burguerMenu" />
+          </button>
+
+          <!-- menu -->
+          <div class="menu-container show">
+            <ul class="menu">
+              <li class="menu-item"><a href="#" class="menu-link">About</a></li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Careers</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Events</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Products</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Support</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <h1 class="page-title">Immersive Experiences that deliver</h1>
     </header>
 
@@ -58,44 +69,50 @@
     <section class="creation">
       <h2 class="creation--title">our creations</h2>
 
-      <div class="creation--article">
-        <img src="./img/mobile/image-deep-earth.jpg" alt="image-deep-earth" />
-        <h3>Deep earth</h3>
-      </div>
-      <div class="creation--article">
-        <img
-          src="./img/mobile/image-night-arcade.jpg"
-          alt="image-night-arcade"
-        />
-        <h3>night arcade</h3>
-      </div>
-      <div class="creation--article">
-        <img src="./img/mobile/image-soccer-team.jpg" alt="image-soccer-team" />
-        <h3>soccer team vr</h3>
-      </div>
-      <div class="creation--article">
-        <img src="./img/mobile/image-grid.jpg" alt="image-grid" />
-        <h3>the grid</h3>
-      </div>
-      <div class="creation--article">
-        <img src="./img/mobile/image-from-above.jpg" alt="image-from-above" />
-        <h3>from up borealis</h3>
-      </div>
-      <div class="creation--article">
-        <img
-          src="./img/mobile/image-pocket-borealis.jpg"
-          alt="image-pocket-borealis"
-        />
-        <h3>pocket borealis</h3>
-      </div>
-      <div class="creation--article">
-        <img src="./img/mobile/image-curiosity.jpg" alt="image-curiosity" />
-        <h3>the curiosity</h3>
-      </div>
-      <div class="creation--article">
-        <img src="./img/mobile/image-fisheye.jpg" alt="image-fisheye" />
-        <h3>make it fisheye</h3>
-      </div>
+      <ul>
+        <li class="creation--article">
+          <img src="./img/mobile/image-deep-earth.jpg" alt="image-deep-earth" />
+          <h3>Deep earth</h3>
+        </li>
+        <li class="creation--article">
+          <img
+            src="./img/mobile/image-night-arcade.jpg"
+            alt="image-night-arcade"
+          />
+          <h3>night arcade</h3>
+        </li>
+        <li class="creation--article">
+          <img
+            src="./img/mobile/image-soccer-team.jpg"
+            alt="image-soccer-team"
+          />
+          <h3>soccer team vr</h3>
+        </li>
+        <li class="creation--article">
+          <img src="./img/mobile/image-grid.jpg" alt="image-grid" />
+          <h3>the grid</h3>
+        </li>
+        <li class="creation--article">
+          <img src="./img/mobile/image-from-above.jpg" alt="image-from-above" />
+          <h3>from up borealis</h3>
+        </li>
+        <li class="creation--article">
+          <img
+            src="./img/mobile/image-pocket-borealis.jpg"
+            alt="image-pocket-borealis"
+          />
+          <h3>pocket borealis</h3>
+        </li>
+        <li class="creation--article">
+          <img src="./img/mobile/image-curiosity.jpg" alt="image-curiosity" />
+          <h3>the curiosity</h3>
+        </li>
+        <li class="creation--article">
+          <img src="./img/mobile/image-fisheye.jpg" alt="image-fisheye" />
+          <h3>make it fisheye</h3>
+        </li>
+      </ul>
+
       <div class="creation--seeAll">see all</div>
     </section>
 
@@ -139,4 +156,7 @@
       </div>
     </footer>
   </body>
+
+  <!-- Script -->
+  <script src="./main.js"></script>
 </html>
