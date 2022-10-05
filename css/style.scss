@@ -1,0 +1,330 @@
+// FONT FAMILY
+
+// @mixin XSmall {
+//     @media screen and (max-width: 320px) {
+//       @content;
+//     }
+//   }
+/* josefin-sans-300 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/josefin-sans-v25-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/josefin-sans-v25-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* alata-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/alata-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/alata-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+   /* Custom properties */
+   $white : rgb(255, 255, 255);
+   $black : rgb(0, 0, 0);
+   $dark-grey : rgb(140, 140, 140);
+   $Very-Dark-Gray : rgb(105, 105, 105);
+
+
+//   TYPOGRAPHIE
+body{
+    
+    font-family: 'Alata';
+    font-size: 1.5rem;
+	font-weight: 400;
+	line-height: calc(38 / 40);
+
+}
+
+:is(h1, h2, h3) {
+    font-family: 'Josefin Sans';
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    text-align: center;
+};
+img{
+    display: block;
+};
+
+.container {
+    max-width: calc(1px * (1111 + (24*2)));
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+// *************************************
+
+.hero{
+    background: url("../img/mobile/image-hero.jpg") no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 4rem;
+    margin-bottom: 9.6rem;
+    z-index: 1;
+
+    .logo{
+        // background-color: red;
+        z-index: 10;
+    }
+
+    .main-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &.show{
+
+            &::before{
+                content: " ";
+                height: 100vh;
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: black;
+            }
+        }
+       
+
+       .main-nav{
+        // background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 991px) {
+            
+        }
+
+        .toggle-menu{
+            scale: 1.4;
+            background: transparent;
+            border: none;
+
+            @media (min-width: 991px) {
+               display: none;
+            }
+        }
+
+        .menu{
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            visibility: hidden;
+
+            @media (min-width: 991px) {
+                // background-color: red;
+                visibility: visible;
+                position:static;
+                display: flex;
+                transform: translateY(0);
+            }
+
+            &.show{
+                visibility: visible;
+            }
+
+            .menu-item{
+                font-family: "Josefin Sans";
+                margin: 24px auto;
+                font-size: 2.4rem;
+                font-weight: 300;
+                line-height:calc(25 / 24);
+                text-transform: uppercase;
+
+                @media (min-width: 991px) {
+                    margin: auto;
+                    padding-right: 3.2rem;
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    
+                }
+            }
+        }
+       }
+    }
+
+    .page-title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        border: 1px solid $white;
+        text-transform: uppercase;
+        color: $white;
+        padding: 26px 24px;
+        
+        &.show{
+            visibility: hidden;
+        }
+    }
+}
+
+
+.main-container{
+    
+    .slogan{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 9.6rem;
+    
+        &--img{
+            text-align: center;
+            
+            img{
+                width: 100%; 
+                object-fit: cover;
+            }
+        }
+    
+        &--title{
+            margin: 16px auto;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+        }
+    
+        p{
+            margin: auto 24px;
+            text-align: center;
+            line-height: 2.5rem;
+            opacity: 0.5;
+            
+        }
+        
+    }
+    
+    .creation-container{
+       
+    
+        &__title{
+            text-transform: uppercase;
+            font-size: 3.2rem;
+            margin-bottom: 4.8rem;
+
+        }
+    
+        .creations{
+
+            &--article{
+                position: relative;
+                margin-bottom: 24px;
+
+                img{
+                    width: 100%; 
+                    height: 100%;
+                    object-fit: cover;
+                }
+                h3{
+                    position: absolute;
+                    font-size: 2rem;
+                    bottom: 2rem;
+                    left: 2rem;
+                    color: $white;
+                    text-transform: uppercase;
+                    width: 40%;
+                }
+            }
+        }
+        
+    
+        &__seeAll{
+            margin: 34px auto;
+            font-size: 1.5rem;
+            padding: 15px 48px;
+            text-align: center;
+            letter-spacing: 5px;
+            background:none;
+            text-transform: uppercase;
+            border: 1px solid black;
+            width: 60%;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+
+
+
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container{
+        margin-top: 5.6rem;
+        margin-bottom: 5.6rem;
+        padding: 0 2.7rem;
+    }
+
+    &--left{
+        
+        &__logo{
+            display: flex;
+            justify-content: center;
+          
+        }
+
+        &__main-nav{
+            text-align: center;
+            // padding: 32px;
+
+            .menu-item{
+                margin: 16px auto;
+               } 
+            
+        }
+    }
+
+    &--right{
+        text-align: center;
+
+        &__social-media{
+            margin-bottom: 1.6rem;
+            margin-top: 4.8rem;
+            display: flex;
+            justify-content: center;
+
+            a{
+                margin: auto 1rem;
+
+                img{
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+
+        p{
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+    }
+}
+
+
+
+
+
