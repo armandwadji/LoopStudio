@@ -202,7 +202,7 @@
         &--content{
         
             @include supMobil{
-                background-color: red;
+                background-color: $white;
                 grid-area: 2 / 2 / 3 / 4;
                 display: grid;
                 place-items: flex-end;

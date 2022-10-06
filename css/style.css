@@ -341,7 +341,7 @@ img {
 }
 @media (min-width: 1000px) {
   .main-container .slogan--content {
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     grid-area: 2/2/3/4;
     display: grid;
     place-items: flex-end;
