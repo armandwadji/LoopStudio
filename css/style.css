@@ -432,6 +432,7 @@ img {
     max-width: 25.6rem;
     min-height: 45rem;
     background-position: center;
+    transition: 0.3s ease-in-out;
   }
   .main-container .creation-container .creations--article:hover {
     cursor: pointer;
@@ -502,6 +503,7 @@ img {
     font-size: 1rem;
     padding: 1.3rem 4.3rem;
     width: 15.7rem;
+    transition: 0.3s ease-in-out;
   }
   .main-container .creation-container__seeAll:hover {
     background-color: rgb(0, 0, 0);
