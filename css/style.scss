@@ -13,12 +13,27 @@
 
   
 .hero{
-    background: url("../img/mobile/image-hero.jpg") no-repeat top center;
-    background-size: cover;
+    background: url("../img/mobile/image-hero.jpg") no-repeat top center / cover;
+    
     height: 100vh;
     padding-top: 4rem;
     margin-bottom: 9.6rem;
     z-index: 1;
+
+    @include supMobil  {
+        background: url("../img/desktop/image-hero.jpg") no-repeat top center / cover;
+
+        &::before{
+            content: " ";
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $black;
+            opacity: 0.5;
+        }
+    }
 
     .logo{
         z-index: 10;
