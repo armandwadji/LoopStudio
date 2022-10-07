@@ -5,12 +5,6 @@
 @import "../css/_typographie";
 @import "../css/_screens-responsive";
 
-@mixin supMobil {
-    @media (min-width: 1000px) {
-      @content;
-    }
-  }
-
   
 .hero{
     background: url("../img/mobile/image-hero.jpg") no-repeat top center / cover;
@@ -167,6 +161,19 @@
         text-transform: uppercase;
         color: $white;
         padding: 2.6rem 2.4rem;
+
+        @include supMobil  {
+            visibility: visible;
+            font-size: 7.2rem;
+            padding: 4rem;
+            max-width: 65rem;
+
+        }
+
+        @include XSmall  {
+            padding: 1rem;
+            font-size: 3.5rem;
+        }
         
         &.show{
             visibility: hidden;
@@ -183,7 +190,6 @@
         }
     }
 }
-
 
 .main-container{
     
@@ -220,7 +226,8 @@
                 background-color: $white;
                 grid-area: 2 / 2 / 3 / 4;
                 display: grid;
-                place-items: flex-end;
+                justify-items: flex-end;
+                align-items: flex-end;
                 padding-left: 9.6rem;
                 padding-bottom: 0.4rem;
             }
