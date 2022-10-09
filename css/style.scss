@@ -14,26 +14,40 @@
     background-position-x: center;
     background-position-y: top;
     height: 100vh;
+    width: 100vw;
     display: grid;
     align-items: center;
+
+    &::before{
+        content: " ";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $black;
+        opacity: 0.5;
+        
+    }
     
 
     .header{
-        background-color: red;
+        // background-color: red;
         position: absolute;
         top: clamp(4rem, calc(2rem + 2.3vw) , 6.4rem);
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-
+        width: clamp(32.5rem, calc(3rem + 73.7vw) , 111rem);
 
         &__nav{
 
 
+            &--toggleMenu{
+                background: transparent;
+                border: none;
+                transform: scale(1.1,1.2);
+            }
 
             &--menu{
-
                 display: none;
             }
         }
@@ -47,6 +61,7 @@
         border: 2px solid $white;
         padding: clamp(2.4rem,1.1rem + 1.5vw , 4rem) ;
         max-width: 65rem;
+        z-index: 1;
     }
     
 }
