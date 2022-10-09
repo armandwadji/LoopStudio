@@ -1,17 +1,18 @@
 //   TYPOGRAPHIE
 body{
     
-    font-family: 'Alata';
+    font-family: 'Alata', sans-serif;
     font-size: 1.5rem;
 	font-weight: 400;
-	line-height: calc(38 / 40);
+	line-height: calc(25 / 15);
 
 }
 
 :is(h1, h2, h3) {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', serif;
     font-size: 4rem;
     font-weight: 300;
+    line-height: calc(38 / 40);
     text-transform: uppercase;
 }
 
@@ -20,20 +21,20 @@ a{
     color: white;
 }
 
-h2{
-    text-align: center;
-};
+// h2{
+//     text-align: center;
+// };
+
 img{
     display: block;
 };
 
 .container {
-    max-width: calc(1px * (1111 + (24*2)));
-    margin: 0 auto;
-    padding: 0 2.4rem;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
 
-    @media (min-width: 991px) {
-        // padding: 0 16.4rem;
-    }
+    // @media (min-width: 991px) {
+    //     // padding: 0 16.4rem;
+    // }
 }
 // *************************************
