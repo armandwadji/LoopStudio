@@ -19,7 +19,25 @@
     
 
     .header{
-        display: none;
+        background-color: red;
+        position: absolute;
+        top: clamp(4rem, calc(2rem + 2.3vw) , 6.4rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        &__nav{
+
+
+
+            &--menu{
+
+                display: none;
+            }
+        }
+
     }
 
     &--title{
@@ -27,7 +45,7 @@
         color: $white;
         font-size: clamp(2.5rem, calc(1.8rem + 3vw), 7.2rem);
         border: 2px solid $white;
-        padding: 2.4rem;
+        padding: clamp(2.4rem,1.1rem + 1.5vw , 4rem) ;
         max-width: 65rem;
     }
     

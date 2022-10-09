@@ -30,8 +30,8 @@ img{
 };
 
 .container {
-    margin-left: 2.4rem;
-    margin-right: 2.4rem;
+    margin-left: clamp(2.4rem, calc(-1.60rem + 13.2vw), 16.5rem) ;
+    margin-right: clamp(2.4rem, calc(-1.60rem + 13.2vw), 16.5rem);
 
     // @media (min-width: 991px) {
     //     // padding: 0 16.4rem;
