@@ -208,7 +208,9 @@ img {
   transform: scale(1.1, 1.2);
 }
 .hero .header__nav--menu {
-  display: none;
+  background-color: red;
+  position: absolute;
+  top: 50%;
 }
 .hero--title {
   color: rgb(255, 255, 255);

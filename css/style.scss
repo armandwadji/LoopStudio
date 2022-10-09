@@ -30,7 +30,6 @@
     
 
     .header{
-        // background-color: red;
         position: absolute;
         top: clamp(4rem, calc(2rem + 2.3vw) , 6.4rem);
         display: flex;
@@ -48,14 +47,16 @@
             }
 
             &--menu{
-                display: none;
+                // display: none;
+                background-color: red;
+                position: absolute;
+                top: 50%;
             }
         }
 
     }
 
     &--title{
-        // background-color: red;
         color: $white;
         font-size: clamp(2.5rem, calc(1.8rem + 3vw), 7.2rem);
         border: 2px solid $white;
