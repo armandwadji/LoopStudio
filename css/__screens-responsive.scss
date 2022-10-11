@@ -23,7 +23,7 @@
 }
 
 @mixin SmallMedium {
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 700px) {
   @content;
 }
 }
@@ -41,7 +41,7 @@
 }
 
 @mixin MidMedium {
-  @media screen and (max-width: 85rem) {
+  @media screen and (min-width: 850px) {
     @content;
   }
 }

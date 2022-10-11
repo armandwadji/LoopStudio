@@ -5,7 +5,7 @@
 @import "../css/_typographie";
 @import "../css/_screens-responsive";
 
-// ************ HEADER *************
+// ************ HERO *************
 
 .hero{
     background-image: url(../img/hero.jpg);
@@ -15,6 +15,12 @@
     background-position-y: top;
     height: 100vh;
     width: 100vw;
+    margin-block-end: 9.6rem;
+
+    @include MidMedium  {
+    //     background-position-y: bottom;
+        margin-block-end: 16rem;
+    }
 
     &::before{
         content: " ";
@@ -29,6 +35,11 @@
     &.show{
         background-image: none;
         background-color: black;
+
+        @include MidMedium  {
+            background-color: transparent;
+            background-image: url(../img/hero.jpg);
+        }
     }
     
 
@@ -43,31 +54,77 @@
         }
 
         &__nav{
-         
+        
 
             &--toggleMenu{
                 background: transparent;
                 border: none;
                 transform: scale(1.1,1.2);
+
+                @include MidMedium  {
+                    visibility: hidden;
+                }
             }
 
             &--menu{
                 position: absolute;
                 top: 50%;
-                left: 2.4rem;
+                left: clamp(2.4rem, calc(-2.2rem + 13vw), 16.5rem);
                 transform: translateY(-50%);
                 visibility: hidden;
 
                 &.show{
                     visibility: visible;
+
+                    @include MidMedium  {
+                        visibility: visible;
+                    }
+                }
+
+                @include MidMedium  {
+                    visibility: visible;
+                    position: static;
+                    display: flex;
+                    
+
+                    & > :not(:last-child){
+                        margin-inline-end: 3.2rem;
+                    }
+
                 }
 
                 .menu-item{
+                    font-family: 'Josefin Sans', sans-serif;
                     font-size: 2.4rem;
                     line-height: 2.5rem;
                     text-transform: uppercase;
                     padding-block-end: 2.4rem;
-                    font-family: 'Josefin Sans', sans-serif;
+
+                    @include MidMedium  {
+                        position: relative;
+                        font-size: 1.5rem;
+                        padding-block-end: 0;
+                        text-transform: capitalize;
+
+                        &::after{
+                            content: " ";
+                            position: absolute;
+                            height: .2rem;
+                            width: 2.4rem;
+                            bottom: 0;
+                            left: 50%;
+                            background-color: $white;
+                            transform:  translateX(-50%) scaleX(0%);
+                            transform-origin: left center;
+                            transition: transform .3s ease-in-out;
+                        }
+                        
+                        &:hover::after{
+                            transform:  translateX(-50%) scaleX(100%);
+
+                        }
+
+                    }
                 }
             }
         }
@@ -91,4 +148,18 @@
         }
     }
     
+}
+
+// ************ MAIN *************
+
+.main{
+    background-color: green;
+
+    &__slogan{
+        margin-block-end: 9.6rem;
+
+        &--img{
+            margin-block-end: 4.8rem;
+        }
+    }
 }
