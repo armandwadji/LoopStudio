@@ -4,8 +4,6 @@ const menu = document.querySelector(".header__nav--menu");
 const title = document.querySelector(".hero--title");
 
 toggleMenu.addEventListener("click", () => {
-  console.log("click");
-
   if (hero.classList.contains("show")) {
     hero.classList.toggle("show");
     menu.classList.toggle("show");
