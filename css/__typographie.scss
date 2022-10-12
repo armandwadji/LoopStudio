@@ -30,11 +30,14 @@ img{
 };
 
 .container {
+    position: relative;
     margin-inline: clamp(2.4rem, calc(-2.2rem + 13vw), 16.5rem) ;
-    // margin-right: clamp(2.4rem, calc(-1.60rem + 13.2vw), 16.5rem);
+    max-width: calc(1px * (1111 + (24*2))); 
+    height: 100%;
+    @include VeryBigLaptop  {
+        margin-inline: auto;
+    }
 
-    // @media (min-width: 991px) {
-    //     // padding: 0 16.4rem;
-    // }
+    
 }
 // *************************************

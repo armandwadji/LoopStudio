@@ -2,8 +2,8 @@
 @import "../css/_helper";
 @import "../css/_font-family";
 @import "../css/_custom-properties";
-@import "../css/_typographie";
 @import "../css/_screens-responsive";
+@import "../css/_typographie";
 
 // ************ HERO *************
 
@@ -48,6 +48,11 @@
         justify-content: space-between;
         align-items: center;
         padding-top: clamp(4rem, calc(2rem + 2.3vw) , 6.4rem);
+
+        // @include VeryBigLaptop  {
+        //     max-width: calc(1px * (1111 + (24*2))); 
+        //     margin-inline: auto;
+        // }
 
         &__logo{
             z-index: 1;
@@ -155,7 +160,7 @@
 .main{
 
     &__slogan{
-        margin-block-end: 9.6rem;
+        margin-block-end: clamp(9.6rem, calc(4rem + 8vw) , 18.4rem) ;
 
         @include MidMedium  {
             display: grid;
@@ -206,6 +211,81 @@
                 @include MidMedium  {
                     text-align: left;
                 }
+            }
+        }
+    }
+
+    &__creations{
+        display: grid;
+        grid-row-gap: 3.4rem;
+
+        &--title{
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        &--container{
+            background-color: green;
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            
+            // grid-template-rows: repeat(8,12rem) ;
+
+            &-article{
+                background-color: red;
+                display: grid;
+                align-items: flex-end;
+                justify-items: start;
+
+                // Position de l'image a voir pendant le responsive
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                // Hauteur des images
+                height: clamp(12rem , 31vw , 45rem) ;
+              
+
+                &.earth{
+                    background-image: url("../img/deepEarth.jpg");
+                    background-position-y: bottom;
+                    
+                }
+                &.nigth-arcade{
+                    background-image: url("../img/nigthArcade.jpg");
+                    background-position: center;
+                }
+                &.soccer-team{
+                    background-image: url("../img/deepEarth.jpg");
+                    background-position-y: bottom;
+                }
+                &.grid{
+                    background-image: url("../img/deepEarth.jpg");
+                }
+                &.from-above{
+                    background-image: url("../img/deepEarth.jpg");
+                }
+                &.pocket-borealis{
+                    background-image: url("../img/deepEarth.jpg");
+                }
+                &.curiosity{
+                    background-image: url("../img/deepEarth.jpg");
+                }
+                &.fisheye{
+                    background-image: url("../img/deepEarth.jpg");
+                }
+                
+            }
+
+            h3{
+                // background-color: blue;
+                display: block;
+                color: $white;
+                font-size: 2.4rem;
+                margin-inline-start: 2rem;
+                margin-block-end: 2rem;
+                width: 40%;
+               
             }
         }
     }

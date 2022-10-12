@@ -86,7 +86,7 @@
 }
 
 @mixin VeryBigLaptop {
-  @media screen and (max-width: 140rem) {
+  @media screen and (min-width: 1440px) {
     @content;
   }
 }
