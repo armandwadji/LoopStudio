@@ -173,7 +173,7 @@ img {
 .container {
   position: relative;
   margin-inline: clamp(2.4rem, -2.2rem + 13vw, 16.5rem);
-  max-width: 1159px;
+  max-width: 1111px;
   height: 100%;
 }
 @media screen and (min-width: 1440px) {
@@ -309,6 +309,10 @@ img {
   visibility: hidden;
 }
 
+.main {
+  -webkit-margin-after: 9.6rem;
+          margin-block-end: 9.6rem;
+}
 .main__slogan {
   -webkit-margin-after: clamp(9.6rem, 4rem + 8vw, 18.4rem);
           margin-block-end: clamp(9.6rem, 4rem + 8vw, 18.4rem);
@@ -374,15 +378,32 @@ img {
   display: grid;
   grid-row-gap: 3.4rem;
 }
+@media screen and (min-width: 700px) {
+  .main__creations {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .main__creations--title {
   font-size: 3.2rem;
   text-align: center;
 }
+@media screen and (min-width: 700px) {
+  .main__creations--title {
+    justify-self: start;
+    align-self: center;
+  }
+}
 .main__creations--container {
-  background-color: green;
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container {
+    order: 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 .main__creations--container-article {
   background-color: red;
@@ -392,36 +413,77 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   height: clamp(12rem, 31vw, 45rem);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.main__creations--container-article:hover {
+  opacity: 0.5;
 }
 .main__creations--container-article.earth {
-  background-image: url("../img/deepEarth.jpg");
-  background-position-y: bottom;
+  background-image: url("../Design-system/Page-main/images/mobile/image-deep-earth.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.earth {
+    background-image: url("../Design-system/Page-main/images/desktop/image-deep-earth.jpg");
+  }
 }
 .main__creations--container-article.nigth-arcade {
-  background-image: url("../img/nigthArcade.jpg");
-  background-position: center;
+  background-image: url("../Design-system/Page-main/images/mobile/image-night-arcade.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.nigth-arcade {
+    background-image: url("../Design-system/Page-main/images/desktop/image-night-arcade.jpg");
+  }
 }
 .main__creations--container-article.soccer-team {
-  background-image: url("../img/deepEarth.jpg");
-  background-position-y: bottom;
+  background-image: url("../Design-system/Page-main/images/mobile/image-soccer-team.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.soccer-team {
+    background-image: url("../Design-system/Page-main/images/desktop/image-soccer-team.jpg");
+  }
 }
 .main__creations--container-article.grid {
-  background-image: url("../img/deepEarth.jpg");
+  background-image: url("../Design-system/Page-main/images/mobile/image-grid.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.grid {
+    background-image: url("../Design-system/Page-main/images/desktop/image-grid.jpg");
+  }
 }
 .main__creations--container-article.from-above {
-  background-image: url("../img/deepEarth.jpg");
+  background-image: url("../Design-system/Page-main/images/mobile/image-from-above.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.from-above {
+    background-image: url("../Design-system/Page-main/images/desktop/image-from-above.jpg");
+  }
 }
 .main__creations--container-article.pocket-borealis {
-  background-image: url("../img/deepEarth.jpg");
+  background-image: url("../Design-system/Page-main/images/mobile/image-pocket-borealis.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.pocket-borealis {
+    background-image: url("../Design-system/Page-main/images/desktop/image-pocket-borealis.jpg");
+  }
 }
 .main__creations--container-article.curiosity {
-  background-image: url("../img/deepEarth.jpg");
+  background-image: url("../Design-system/Page-main/images/mobile/image-curiosity.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.curiosity {
+    background-image: url("../Design-system/Page-main/images/desktop/image-curiosity.jpg");
+  }
 }
 .main__creations--container-article.fisheye {
-  background-image: url("../img/deepEarth.jpg");
+  background-image: url("../Design-system/Page-main/images/mobile/image-fisheye.jpg");
+}
+@media screen and (min-width: 700px) {
+  .main__creations--container-article.fisheye {
+    background-image: url("../Design-system/Page-main/images/desktop/image-fisheye.jpg");
+  }
 }
 .main__creations--container h3 {
-  display: block;
   color: rgb(255, 255, 255);
   font-size: clamp(2.4rem, 1.3rem + 0.8vw, 3.2rem);
   -webkit-margin-start: clamp(2rem, 0.9rem + 1.9vw, 4rem);
@@ -429,4 +491,31 @@ img {
   -webkit-margin-after: clamp(2rem, 0.9rem + 1.9vw, 4rem);
           margin-block-end: clamp(2rem, 0.9rem + 1.9vw, 4rem);
   width: 45%;
+}
+.main__creations--seeAll {
+  background: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  margin-inline: auto;
+  padding-block: 1.1rem;
+  padding-inline: 4rem;
+  width: 16rem;
+  font-size: 1.4rem;
+  border: none;
+  outline: 0.1rem solid;
+}
+@media screen and (min-width: 700px) {
+  .main__creations--seeAll {
+    margin-inline: 0;
+    justify-self: end;
+    transition: 0.3s ease-in-out;
+  }
+  .main__creations--seeAll:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
 }/*# sourceMappingURL=style.css.map */

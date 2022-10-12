@@ -32,8 +32,9 @@ img{
 .container {
     position: relative;
     margin-inline: clamp(2.4rem, calc(-2.2rem + 13vw), 16.5rem) ;
-    max-width: calc(1px * (1111 + (24*2))); 
+    max-width: calc(1px * (1111 )); 
     height: 100%;
+
     @include VeryBigLaptop  {
         margin-inline: auto;
     }
