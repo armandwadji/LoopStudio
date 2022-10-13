@@ -1,6 +1,6 @@
 <div>
   <h1 align="center">
-    <a href="https://github.com/armandwadji/LoopStudio.git">LoopStudio 🕶
+    <a href="https://github.com/armandwadji/LoopStudio.git">LoopStudios  🕶
     </a>  
   </h1>
 </div> 
