@@ -1,11 +1,116 @@
 @mixin XSmall {
-    @media screen and (max-width: 320px) {
-      @content;
-    }
+  @media screen and (max-width: 32rem) {
+    @content;
   }
+}
 
-@mixin supMobil {
-  @media (min-width: 1000px) {
+@mixin Small {
+  @media screen and (max-width: 37rem) {
+    @content;
+  }
+}
+
+@mixin MediumSmall {
+@media screen and (max-width: 40rem) {
+  @content;
+}
+}
+
+@mixin BigSmall {
+@media screen and (max-width: 42.5rem) {
+  @content;
+}
+}
+
+@mixin SmallMedium {
+@media screen and (min-width: 700px) {
+  @content;
+}
+}
+
+@mixin SmallMedMedium {
+@media screen and (max-width: 72rem) {
+  @content;
+}
+}
+
+@mixin Medium {
+  @media screen and (max-width: 78rem) {
+    @content;
+  }
+}
+
+@mixin MidMedium {
+  @media screen and (min-width: 850px) {
+    @content;
+  }
+}
+
+@mixin BigMedium {
+  @media screen and (max-width: 90rem) {
+    @content;
+  }
+}
+
+@mixin MediumLaptop {
+
+  @media screen and (max-width: 102.6rem) {
+    @content;
+  }
+}
+
+@mixin MidMedLaptop {
+
+  @media screen and (max-width: 115rem) {
+    @content;
+  }
+}
+
+@mixin MidLaptop {
+  @media screen and (max-width: 125rem) {
+    @content;
+  }
+}
+
+@mixin Laptop {
+  @media screen and (max-width: 130rem) {
+    @content;
+  }
+}
+
+
+@mixin BigLaptop {
+  @media screen and (max-width: 134rem) {
+    @content;
+  }
+}
+
+@mixin VeryBigLaptop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin Desktop {
+  @media screen and (max-width: 150rem) {
+    @content;
+  }
+}
+
+@mixin BigDesktop {
+  @media screen and (max-width: 150rem) {
+    @content;
+  }
+}
+
+@mixin VeryBigDesktop {
+  @media screen and (max-width: 150rem) {
+    @content;
+  }
+}
+
+@mixin HugeDesktop {
+  @media screen and (max-width: 195rem) {
     @content;
   }
 }

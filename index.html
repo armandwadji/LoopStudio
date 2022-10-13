@@ -14,126 +14,121 @@
   <body>
     <!-- hero -->
     <header class="hero">
-      <!-- Header -->
-      <div class="main-header container">
-        <!-- logo -->
-        <a href="#" class="logo">
-          <img src="./img/logo.svg" alt="logo" />
-        </a>
-
-        <!-- nav -->
-        <nav class="main-nav">
-          <!-- button -->
-          <button type="button" class="toggle-menu">
-            <img src="./img/icon-hamburger.svg" alt="burguerMenu" />
-          </button>
-
-          <!-- menu -->
-
-          <ul class="menu">
-            <li class="menu-item hover">
-              <a href="#" class="menu-link">About</a>
-            </li>
-            <li class="menu-item hover">
-              <a href="#" class="menu-link">Careers</a>
-            </li>
-            <li class="menu-item hover">
-              <a href="#" class="menu-link">Events</a>
-            </li>
-            <li class="menu-item hover">
-              <a href="#" class="menu-link">Products</a>
-            </li>
-            <li class="menu-item hover">
-              <a href="#" class="menu-link">Support</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
       <div class="container">
-        <h1 class="page-title">Immersive Experiences that deliver</h1>
+        <!-- Header -->
+        <div class="header">
+          <!-- logo -->
+          <a href="#" class="header__logo">
+            <img src="./img/logo.svg" alt="logo" />
+          </a>
+
+          <!-- nav -->
+          <nav class="header__nav">
+            <!-- button -->
+            <button type="button" class="header__nav--toggleMenu">
+              <img src="./img/Icons/icon-hamburger.svg" alt="burguerMenu" />
+            </button>
+
+            <!-- menu -->
+            <ul class="header__nav--menu">
+              <li class="menu-item hover">
+                <a href="#" class="menu-link">About</a>
+              </li>
+              <li class="menu-item hover">
+                <a href="#" class="menu-link">Careers</a>
+              </li>
+              <li class="menu-item hover">
+                <a href="#" class="menu-link">Events</a>
+              </li>
+              <li class="menu-item hover">
+                <a href="#" class="menu-link">Products</a>
+              </li>
+              <li class="menu-item hover">
+                <a href="#" class="menu-link">Support</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- title -->
+        <h1 class="hero--title">Immersive Experiences that deliver</h1>
       </div>
     </header>
 
-    <main class="main-container container">
+    <!-- Main -->
+    <main class="main">
       <!-- Slogan -->
-      <section class="slogan">
-        <!-- <div class="slogan--img"> -->
+      <section class="main__slogan container">
         <img
-          class="slogan--img"
-          src="./img/mobile/image-interactive.jpg"
+          class="main__slogan--img"
+          src="/img/interactive.jpg"
           alt="image-interactive"
         />
-        <!-- </div> -->
-        <div class="slogan--content">
-          <div class="slogan--position">
-            <h2 class="slogan--title">The leader in interactive VR</h2>
-            <p>
-              Founded in 2011, Loopstudios has been producing world-class
-              virtual reality projects for some of the best companies around the
-              globe. Our award-winning creations have transformed businesses
-              through digital experiences that bind to their brand.
-            </p>
-          </div>
+
+        <div class="main__slogan--content">
+          <h2 class="slogan--title">The leader in interactive VR</h2>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
         </div>
       </section>
 
-      <!-- Création -->
-      <section class="creation-container">
-        <h2 class="creation-container__title">our creations</h2>
+      <!-- Créations -->
+      <section class="main__creations container">
+        <!-- Title -->
+        <h2 class="main__creations--title">our creations</h2>
 
-        <ul class="creations">
-          <li class="creations--article earth">
-            <!-- <img
-              src="./img/mobile/image-deep-earth.jpg"
-              alt="image-deep-earth"
-            /> -->
+        <ul class="main__creations--container">
+          <li class="main__creations--container-article earth">
+            <!-- <img src="/img/deepEarth.jpg" alt="image-deep-earth" /> -->
             <h3>Deep earth</h3>
           </li>
-          <li class="creations--article nigth-arcade">
+          <li class="main__creations--container-article nigth-arcade">
             <!-- <img
               src="./img/mobile/image-night-arcade.jpg"
               alt="image-night-arcade"
             /> -->
             <h3>night arcade</h3>
           </li>
-          <li class="creations--article soccer-team">
+          <li class="main__creations--container-article soccer-team">
             <!-- <img
               src="./img/mobile/image-soccer-team.jpg"
               alt="image-soccer-team"
             /> -->
             <h3>soccer team vr</h3>
           </li>
-          <li class="creations--article grid">
+          <li class="main__creations--container-article grid">
             <!-- <img src="./img/mobile/image-grid.jpg" alt="image-grid" /> -->
             <h3>the grid</h3>
           </li>
-          <li class="creations--article from-above">
+          <li class="main__creations--container-article from-above">
             <!-- <img
               src="./img/mobile/image-from-above.jpg"
               alt="image-from-above"
             /> -->
-            <h3>from up borealis</h3>
+            <h3>FROM UP ABOVE VR</h3>
           </li>
-          <li class="creations--article pocket-borealis">
+          <li class="main__creations--container-article pocket-borealis">
             <!-- <img
               src="./img/mobile/image-pocket-borealis.jpg"
               alt="image-pocket-borealis"
             /> -->
             <h3>pocket borealis</h3>
           </li>
-          <li class="creations--article curiosity">
+          <li class="main__creations--container-article curiosity">
             <!-- <img src="./img/mobile/image-curiosity.jpg" alt="image-curiosity" /> -->
             <h3>the curiosity</h3>
           </li>
-          <li class="creations--article fisheye">
+          <li class="main__creations--container-article fisheye">
             <!-- <img src="./img/mobile/image-fisheye.jpg" alt="image-fisheye" /> -->
             <h3>make it fisheye</h3>
           </li>
         </ul>
 
-        <div class="seeAllContainer">
-          <p class="creation-container__seeAll">see all</p>
-        </div>
+        <button class="main__creations--seeAll">see all</button>
       </section>
     </main>
 
@@ -170,16 +165,28 @@
         <div class="footer--right">
           <div class="footer--right__social-media">
             <a href="https://www.facebook.com" class="hover">
-              <img src="./img/icon-facebook.svg" alt="icon-facebook" />
+              <img
+                src="/Design-system/Page-main/images/icon-facebook.svg"
+                alt="icon-facebook"
+              />
             </a>
             <a href="https://www.twitter.com" class="hover">
-              <img src="./img/icon-twitter.svg" alt="icon-twitter" />
+              <img
+                src="/Design-system/Page-main/images/icon-twitter.svg"
+                alt="icon-twitter"
+              />
             </a>
             <a href="https://www.pinterest.com" class="hover">
-              <img src="./img/icon-pinterest.svg" alt="icon-pinterest" />
+              <img
+                src="/Design-system/Page-main/images/icon-pinterest.svg"
+                alt="icon-pinterest"
+              />
             </a>
             <a href="https://www.instagram.com" class="hover">
-              <img src="./img/icon-instagram.svg" alt="icon-instagram" />
+              <img
+                src="/Design-system/Page-main/images/icon-instagram.svg"
+                alt="icon-instagram"
+              />
             </a>
           </div>
           <p>&copy 2022 loopstudios. All rights reserved.</p>

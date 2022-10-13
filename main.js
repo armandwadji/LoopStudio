@@ -1,22 +1,20 @@
-const toggleMenu = document.querySelector(".toggle-menu");
-const menuContainer = document.querySelector(".main-header");
-const heroTitle = document.querySelector(".page-title");
-
-const menu = document.querySelector(".menu");
+const toggleMenu = document.querySelector(".header__nav--toggleMenu");
+const hero = document.querySelector(".hero");
+const menu = document.querySelector(".header__nav--menu");
+const title = document.querySelector(".hero--title");
 
 toggleMenu.addEventListener("click", () => {
-  console.log("click");
-
-  if (menuContainer.classList.contains("show")) {
-    menuContainer.classList.toggle("show");
-    heroTitle.classList.toggle("show");
+  if (hero.classList.contains("show")) {
+    hero.classList.toggle("show");
     menu.classList.toggle("show");
+    title.classList.toggle("show");
     toggleMenu.firstElementChild.attributes.src.value =
-      "./img/icon-hamburger.svg";
+      "/img/Icons/icon-hamburger.svg";
   } else {
-    menuContainer.classList.toggle("show");
-    heroTitle.classList.toggle("show");
+    hero.classList.toggle("show");
     menu.classList.toggle("show");
-    toggleMenu.firstElementChild.attributes.src.value = "./img/icon-close.svg";
+    title.classList.toggle("show");
+    toggleMenu.firstElementChild.attributes.src.value =
+      "/img/Icons/icon-close.svg";
   }
 });

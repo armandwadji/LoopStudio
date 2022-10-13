@@ -2,432 +2,342 @@
 @import "../css/_helper";
 @import "../css/_font-family";
 @import "../css/_custom-properties";
-@import "../css/_typographie";
 @import "../css/_screens-responsive";
+@import "../css/_typographie";
 
-  
+// ************ HERO *************
 .hero{
-    background: url("../img/mobile/image-hero.jpg") no-repeat top center / cover;
-    
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
     height: 100vh;
-    padding-top: 4rem;
-    margin-bottom: 9.6rem;
-    z-index: 1;
+    width: 100vw;
+    margin-block-end: 9.6rem;
 
-    @include supMobil  {
-        background: url("../img/desktop/image-hero.jpg") no-repeat top center / cover;
+    @include MidMedium  {
+        margin-block-end: 16rem;
+    }
 
-        &::before{
-            content: " ";
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: $black;
-            opacity: 0.5;
+    &::before{
+        content: " ";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $black;
+        opacity: 0.5;
+        
+    }
+
+    &.show{
+        background-image: none;
+        background-color: black;
+
+        @include MidMedium  {
+            background-color: transparent;
+            background-image: url(../img/hero.jpg);
         }
     }
+    
 
-    .logo{
-        z-index: 10;
-    }
-
-    .main-header{
+    .header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: clamp(4rem, calc(2rem + 2.3vw) , 6.4rem);
 
-
-        &.show{
-
-            &::before{
-                content: " ";
-                height: 100vh;
-                width: 100vw;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: $black;
-
-                @include supMobil  {
-                    display: none;
-                }
-            }
-            
-        }
-       
-
-       .main-nav{
-        // background-color: green;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-      
-
-        .toggle-menu{
-            scale: 1.4;
-            background: transparent;
-            border: none;
-
-            @include supMobil  {
-               display: none;
-            }
+        &__logo{
+            z-index: 1;
         }
 
-        .menu{
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-            visibility: hidden;
-
-            @include supMobil  {
-                // background-color: red;
-                visibility: visible;
-                position:static;
-                display: flex;
-                transform: translateY(0);
-            }
-
-            &.show{
-                visibility: visible;
-            }
-
-            .menu-item{
-                
-                position: relative;
-                font-family: "Josefin Sans";
-                margin: 24px auto;
-                font-size: 2.4rem;
-                font-weight: 300;
-                line-height:calc(25 / 24);
-                text-transform: uppercase;
-
-                @include supMobil  {
-                    // background-color: red;
-                    margin: auto;
-                    margin-right: 3.2rem;
-                    font-size: 1.5rem;
-                    text-transform: capitalize;
-                    font-weight: 400;
-
-                    &.hover{
-
-                        &:hover{
-
-                            &::after {
-                                content: " ";
-                                height: 0.2rem;
-                                width: 2.4rem;
-                                background-color: $white;
-                                position: absolute;
-                                bottom: -.8rem;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                transform-origin: left center;
-                                animation: slideIn 0.3s ease-in-out alternate ;
-                            }
-                            
-                           
-                        }
-    
-                        @keyframes slideIn {
-                            from{
-                                transform: translateX(-50%) scaleX(0%);
-                            }
-                            to{
-                                transform: translateX(-50%) scaleX(100%);
-                            }
-                            
-                        }
-                    }
-                    
-                    
-                }
-            }
-        }
-       }
-    }
-   
-
-    .page-title{
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        transform: translateY(100%);
-        border: 1px solid $white;
-        text-transform: uppercase;
-        color: $white;
-        padding: 2.6rem 2.4rem;
-
-        @include supMobil  {
-            visibility: visible;
-            font-size: 7.2rem;
-            padding: 4rem;
-            max-width: 65rem;
-
-        }
-
-        @include XSmall  {
-            padding: 1rem;
-            font-size: 3.5rem;
-        }
+        &__nav{
         
-        &.show{
-            visibility: hidden;
-            @include supMobil  {
-                visibility: visible;
+
+            &--toggleMenu{
+                background: transparent;
+                border: none;
+                transform: scale(1.1,1.2);
+
+                @include MidMedium  {
+                    visibility: hidden;
+                }
+            }
+
+            &--menu{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                visibility: hidden;
+
+                &.show{
+                    visibility: visible;
+
+                    @include MidMedium  {
+                        visibility: visible;
+                    }
+                }
+
+                @include MidMedium  {
+                    visibility: visible;
+                    position: static;
+                    display: flex;
+                    
+
+                    & > :not(:last-child){
+                        margin-inline-end: 3.2rem;
+                    }
+
+                }
+
+                .menu-item{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 2.4rem;
+                    line-height: 2.5rem;
+                    text-transform: uppercase;
+                    padding-block-end: 2.4rem;
+
+                    @include MidMedium  {
+                        position: relative;
+                        font-size: 1.5rem;
+                        padding-block-end: 0;
+                        text-transform: capitalize;
+
+                    }
+                }
             }
         }
-        @include supMobil  {
-            visibility: visible;
-            font-size: 7.2rem;
-            padding: 4rem;
-            max-width: 65rem;
 
+    }
+
+    &--title{
+        color: $white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: clamp(2.5rem, calc(1.8rem + 3vw), 7.2rem);
+        border: 2px solid $white;
+        padding: clamp(2.4rem,1.1rem + 1.5vw , 4rem) ;
+        max-width: 65rem;
+        z-index: 1;
+
+        &.show{
+            visibility: hidden;
         }
     }
+    
 }
 
-.main-container{
-    
-    .slogan{
-        // background-color: red;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 9.6rem;
+// ************ MAIN *************
+.main{
+    margin-block-end: 9.6rem;
 
-        @include supMobil{
+    &__slogan{
+        margin-block-end: clamp(9.6rem, calc(4rem + 8vw) , 18.4rem) ;
+
+        @include MidMedium  {
             display: grid;
-            align-items: stretch;
-            grid-template-columns: 57rem auto 38rem;
-            grid-template-rows: 18.3rem 31.7rem;
-
+            grid-template-columns: 57fr 16fr 38fr;
+            grid-template-rows: 18fr 31fr;
         }
-    
+
         &--img{
-            text-align: center;
-            @include supMobil{
-                grid-area: 1 / 1 / -1 / -2;
-            }
-            
-            img{
-                width: 100%; 
-                object-fit: cover;
+            margin-block-end: 4.8rem;
+            width: 100%;
+            object-fit: cover;
+
+            @include MidMedium  {
+                grid-area: 1 / 1 / -1 / 3;
             }
         }
 
         &--content{
-        
-            @include supMobil{
+            padding-inline: 2.4rem;
+
+            @include MidMedium  {
                 background-color: $white;
-                grid-area: 2 / 2 / 3 / 4;
+                grid-area: 2 / 2 / -1 / -1;
                 display: grid;
-                justify-items: flex-end;
-                align-items: flex-end;
-                padding-left: 9.6rem;
-                padding-bottom: 0.4rem;
+                place-content: flex-end;
+                padding-inline-start: 9.6rem;
+                padding-inline-end: 0;
+                
             }
-        }
-    
-        &--title{
-            margin: 16px auto;
-            font-size: 3.2rem;
-            text-transform: uppercase;
 
-            @include supMobil{
-                margin: 0, 0, 2.5rem, 0;
-                font-size: 4.8rem;
-                text-align: left;
+            h2{
+                font-size: 3.2rem;
+                text-align: center;
+                margin-block-end: 1.6rem;
+                
+                @include MidMedium  {
+                    font-size: 4.8rem;
+                    text-align: left;
+                    margin-block-end: 2.5rem;
+                  
+                }
+            }
+
+            p{
+                text-align: center;
+                opacity: .5;
+
+                @include MidMedium  {
+                    text-align: left;
+                }
             }
         }
-    
-        p{
-            margin: auto 24px;
-            text-align: center;
-            line-height: 2.5rem;
-            opacity: 0.5;
-            
-            @include supMobil{
-                margin: 0;
-                text-align: left;
-                display: block;
-                margin-bottom: 0.5rem;
-            }
-        }
-        
     }
-    
-    .creation-container{
-        // background-color: red;
 
-        @include supMobil  {
-            display: grid;
-            grid-template-columns: repeat(2 , 1fr);
-            align-items: center;
-            
-        }
+    &__creations{
+        display: grid;
+        grid-row-gap: 3.4rem;
         
-        &__title{
-            text-transform: uppercase;
-            font-size: 3.2rem;
-            margin-bottom: 4.8rem;
-            // order: 1;
-
-            @include supMobil  {
-                // background-color: green;
-                margin: 0;
-                text-align: left;
-            }
-            
-
+        @include SmallMedium{
+           grid-template-columns: 1fr 1fr;
         }
-    
-        .creations{
-            
-            @include supMobil  {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 3rem;
-                // order: -1;
-                grid-area:2 / 1 / 3 / -1;
-               
 
+        &--title{
+            font-size: 3.2rem;
+            text-align: center;
+
+            @include SmallMedium{
+                justify-self: start;
+                align-self: center;
+            }
+        }
+
+        &--container{
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+            @include SmallMedium{
+                order: 1;
+                grid-column-start: 1;
+                grid-column-end: -1;
             }
 
-            &--article{
-                margin-bottom: 24px;
-                min-height: 12rem;
-
+            &-article{
+                display: grid;
+                align-items: flex-end;
+                justify-items: start;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: top;
-                object-fit: cover;
-                display: flex;
-                align-items: flex-end;
+                height: clamp(12rem , 31vw , 45rem) ;
+                cursor: pointer;
+                transition: .2s ease-in-out;
 
-                @include supMobil  {
-                    margin: 0;
-                    max-width: 25.6rem;
-                    min-height: 45rem;
-                    background-position: center;
-                    transition: .3s ease-in-out;
-                   
+                @include MidMedium  {
                     &:hover{
-                        cursor: pointer;
                         opacity: 0.5;
                     }
                 }
 
                 &.earth{
-                    background-image: url("../img/desktop/image-deep-earth.jpg");   
-                }
+                    background-image: url("../Design-system/Page-main/images/mobile/image-deep-earth.jpg");
 
-                &.nigth-arcade{
-                    background-image: url("../img/desktop/image-night-arcade.jpg");   
-                }
-                &.soccer-team{
-                    background-image: url("../img/desktop/image-soccer-team.jpg");   
-                }
-                &.grid{
-                    background-image: url("../img/desktop/image-grid.jpg");   
-                }
-                &.from-above{
-                    background-image: url("../img/desktop/image-from-above.jpg");   
-                }
-                &.pocket-borealis{
-                    background-image: url("../img/desktop/image-pocket-borealis.jpg");   
-                }
-                &.curiosity{
-                    background-image: url("../img/desktop/image-curiosity.jpg");   
-                }
-                &.fisheye{
-                    background-image: url("../img/desktop/image-fisheye.jpg");  
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-deep-earth.jpg");
+                    }
                     
                 }
+                &.nigth-arcade{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-night-arcade.jpg");
 
-                // img{
-                //     width: 100%; 
-                //     height: 100%;
-                //     object-fit:cover;
-                //     object-position: center;
-
-                //     @media (min-width: 991px) {
-                //         aspect-ratio: 9 / 16;
-                //     }
-                // }
-                h3{
-                    // background-color: red;
-                    display: block;
-                    position: relative;
-                    font-size: 2rem;
-                    color: $white;
-                    width: 40%;
-                    margin-left: 2rem;
-                    margin-bottom: 2rem;
-
-                    @include supMobil  {
-                        font-size: 3.2rem;
-                        margin-left: 4rem;
-                        margin-bottom: 3.2rem;
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-night-arcade.jpg");
                     }
                 }
-            }
-        }
-        
-        .seeAllContainer{
-            // background-color: green; 
+                &.soccer-team{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-soccer-team.jpg");
 
-            @include supMobil  {
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
-    
-        &__seeAll{
-            margin: 34px auto;
-            font-size: 1.5rem;
-            padding: 1.3rem 4rem;
-            text-align: center;
-            letter-spacing: .5rem;
-            background:none;
-            text-transform: uppercase;
-            border: .1rem solid $black;
-            width: 60%;
-            cursor: pointer;
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-soccer-team.jpg");
+                    }
+                }
+                &.grid{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-grid.jpg");
 
-            @include supMobil  {
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-grid.jpg");
+                    }
+                }
+                &.from-above{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-from-above.jpg");
 
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-from-above.jpg");
+                    }
+                }
+                &.pocket-borealis{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-pocket-borealis.jpg");
+
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-pocket-borealis.jpg");
+                    }
+                }
+                &.curiosity{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-curiosity.jpg");
+
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-curiosity.jpg");
+                    }
+                }
+                &.fisheye{
+                    background-image: url("../Design-system/Page-main/images/mobile/image-fisheye.jpg");
+
+                    @include SmallMedium{
+                        background-image: url("../Design-system/Page-main/images/desktop/image-fisheye.jpg");
+                    }
+                }
                 
-                margin: 0;
-                font-size: 1rem;
-                padding: 1.3rem 4.3rem;
-                width: 15.7rem;
-                transition: 0.3s ease-in-out;
-                // order: 2;
+            }
+
+            h3{
+                color: $white;
+                font-size: clamp(2.4rem, calc(1.3rem + 0.8vw) , 3.2rem);
+                margin-inline-start: clamp(2rem, calc(0.9rem + 1.9vw), 4rem);
+                margin-block-end: clamp(2rem, calc(0.9rem + 1.9vw), 4rem);
+                width: 45%;
+               
+            }
+        }
+
+        &--seeAll{
+            background: transparent;
+            text-transform: uppercase;
+            text-align: center;
+            margin-inline: auto;
+            padding-block: 1.1rem;
+            padding-inline: 4rem;
+            width: 16rem;
+            font-size: 1.4rem;
+            border: none;
+            outline:  .1rem solid $black;
+
+            @include SmallMedium{
+                margin-inline: 0;
+                justify-self: end;
+                transition: .3s ease-in-out;
 
                 &:hover{
                     background-color: $black;
                     color: $white;
                 }
-
-               
             }
-            
         }
     }
 }
 
+// ************ FOOTER *************
 .footer{
     background-color: $black;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include supMobil  {
+    @include SmallMedium  {
         display:inline-block;
         width: 100%;
     }
@@ -436,8 +346,7 @@
         margin-top: 5.6rem;
         margin-bottom: 5.6rem;
 
-        @include supMobil  {
-            // background-color: red;
+        @include SmallMedium  {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -446,13 +355,12 @@
     }
 
     &--left{
-        // background-color: green;
         &__logo{
             display: flex;
             justify-content: center;
             height: 2.4rem;
           
-            @include supMobil  {
+            @include SmallMedium  {
                 justify-content: flex-start;
                 margin-bottom: 2.4rem;
             }
@@ -462,7 +370,7 @@
             text-align: center;
 
             .menu{
-                @include supMobil  {
+                @include SmallMedium  {
                     display: flex;
                     justify-content: flex-start
                 }
@@ -475,7 +383,7 @@
                 margin: 1.6rem auto;
                 font-size: 1.5rem;
 
-                @include supMobil  {
+                @include SmallMedium  {
                     margin-top: 0;
                     margin-bottom: 0;
                     margin-right: 3.2rem;
@@ -487,10 +395,9 @@
     }
 
     &--right{
-        // background-color: green;
         text-align: center;
 
-        @include supMobil  {
+        @include SmallMedium  {
             
             display: flex;
             flex-direction: column;
@@ -504,7 +411,7 @@
             display: flex;
             justify-content: center;
 
-            @include supMobil  {
+            @include SmallMedium  {
                 margin-top: 0;
                 margin-bottom: 2.4rem;
                 justify-content: flex-end;
@@ -529,38 +436,28 @@
     }
 }
 
-@include supMobil  {
-    .hover{
+// ************ HOVER *************
+.hover{
 
-            &::after {
-                content: " ";
-                height: 0.2rem;
-                width: 2.4rem;
-                background-color: $white;
-                position: absolute;
-                bottom: -.8rem;
-                left: 50%;
-                transform: translateX(-50%) scaleX(0%);
-                transform-origin: left center;
-                transition: 0.3s;
-                // animation: slideIn 0.3s ease-in-out alternate ;
-            }
-            
-            &:hover{  
-                
-                &::after{
-                    transform: translateX(-50%) scaleX(100%);
-                }
-            }
+    @include MidMedium  {
 
-        @keyframes slideIn {
-            from{
-                transform: translateX(-50%) scaleX(0%);
-            }
-            to{
-                transform: translateX(-50%) scaleX(100%);
-            }
-            
+        &::after{
+            content: " ";
+            position: absolute;
+            height: .2rem;
+            width: 2.4rem;
+            bottom: -.8rem;
+            left: 50%;
+            background-color: $white;
+            transform:  translateX(-50%) scaleX(0%);
+            transform-origin: left center;
+            transition: transform .3s ease-in-out;
+        }
+        
+        &:hover::after{
+            transform:  translateX(-50%) scaleX(100%);
+
         }
     }
+
 }
