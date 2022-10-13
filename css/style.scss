@@ -6,7 +6,6 @@
 @import "../css/_typographie";
 
 // ************ HERO *************
-
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -131,7 +130,6 @@
 }
 
 // ************ MAIN *************
-
 .main{
     margin-block-end: 9.6rem;
 
@@ -230,10 +228,11 @@
                 cursor: pointer;
                 transition: .2s ease-in-out;
 
-                &:hover{
-                    opacity: 0.5;
+                @include MidMedium  {
+                    &:hover{
+                        opacity: 0.5;
+                    }
                 }
-              
 
                 &.earth{
                     background-image: url("../Design-system/Page-main/images/mobile/image-deep-earth.jpg");
@@ -332,7 +331,6 @@
 }
 
 // ************ FOOTER *************
-
 .footer{
     background-color: $black;
     display: flex;
@@ -439,7 +437,6 @@
 }
 
 // ************ HOVER *************
-
 .hover{
 
     @include MidMedium  {

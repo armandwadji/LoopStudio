@@ -400,8 +400,10 @@ img {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-.main__creations--container-article:hover {
-  opacity: 0.5;
+@media screen and (min-width: 850px) {
+  .main__creations--container-article:hover {
+    opacity: 0.5;
+  }
 }
 .main__creations--container-article.earth {
   background-image: url("../Design-system/Page-main/images/mobile/image-deep-earth.jpg");
