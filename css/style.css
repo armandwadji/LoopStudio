@@ -241,7 +241,7 @@ img {
 .hero .header__nav--toggleMenu-burger {
   width: 5rem;
   height: 0.2rem;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
@@ -250,7 +250,7 @@ img {
   position: absolute;
   width: 5rem;
   height: 0.2rem;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
