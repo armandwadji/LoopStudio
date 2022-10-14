@@ -229,7 +229,46 @@ img {
 .hero .header__nav--toggleMenu {
   background: transparent;
   border: none;
-  transform: scale(1.1, 1.2);
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.hero .header__nav--toggleMenu-burger {
+  width: 5rem;
+  height: 0.2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.hero .header__nav--toggleMenu-burger::before, .hero .header__nav--toggleMenu-burger::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 0.2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.hero .header__nav--toggleMenu-burger::before {
+  transform: translate(-50%, -1.6rem);
+}
+.hero .header__nav--toggleMenu-burger::after {
+  transform: translate(-50%, 1.6rem);
+}
+.hero .header__nav--toggleMenu.show .header__nav--toggleMenu-burger {
+  transform: translateX(-50%);
+  background: transparent;
+}
+.hero .header__nav--toggleMenu.show .header__nav--toggleMenu-burger::before {
+  transform: rotate(45deg);
+}
+.hero .header__nav--toggleMenu.show .header__nav--toggleMenu-burger::after {
+  transform: rotate(-45deg);
 }
 @media screen and (min-width: 850px) {
   .hero .header__nav--toggleMenu {
