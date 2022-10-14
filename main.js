@@ -4,17 +4,8 @@ const menu = document.querySelector(".header__nav--menu");
 const title = document.querySelector(".hero--title");
 
 toggleMenu.addEventListener("click", () => {
-  if (hero.classList.contains("show")) {
-    hero.classList.toggle("show");
-    menu.classList.toggle("show");
-    title.classList.toggle("show");
-    toggleMenu.firstElementChild.attributes.src.value =
-      "/img/Icons/icon-hamburger.svg";
-  } else {
-    hero.classList.toggle("show");
-    menu.classList.toggle("show");
-    title.classList.toggle("show");
-    toggleMenu.firstElementChild.attributes.src.value =
-      "/img/Icons/icon-close.svg";
-  }
+  hero.classList.toggle("show");
+  menu.classList.toggle("show");
+  title.classList.toggle("show");
+  toggleMenu.classList.toggle("show");
 });

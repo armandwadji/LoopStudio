@@ -113,11 +113,13 @@
         position: absolute;
         left: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-100vw, -50%);
         visibility: hidden;
+        transition: 0.25s ease-in-out;
 
         &.show {
           visibility: visible;
+          transform: translate(0, -50%);
 
           @include MidMedium {
             visibility: visible;
@@ -161,10 +163,13 @@
     border: 2px solid $white;
     padding: clamp(2.4rem, 1.1rem + 1.5vw, 4rem);
     max-width: 65rem;
+    opacity: 1;
     z-index: 1;
+    transition: opacity 0.2s ease-in-out;
 
     &.show {
-      visibility: hidden;
+      opacity: 0;
+      // visibility: hidden;
     }
   }
 }
