@@ -11,27 +11,27 @@
 }
 
 @mixin MediumSmall {
-@media screen and (max-width: 40rem) {
-  @content;
-}
+  @media screen and (min-width: 400px) {
+    @content;
+  }
 }
 
 @mixin BigSmall {
-@media screen and (max-width: 42.5rem) {
-  @content;
-}
+  @media screen and (max-width: 42.5rem) {
+    @content;
+  }
 }
 
 @mixin SmallMedium {
-@media screen and (min-width: 700px) {
-  @content;
-}
+  @media screen and (min-width: 700px) {
+    @content;
+  }
 }
 
 @mixin SmallMedMedium {
-@media screen and (max-width: 72rem) {
-  @content;
-}
+  @media screen and (max-width: 72rem) {
+    @content;
+  }
 }
 
 @mixin Medium {
@@ -53,14 +53,12 @@
 }
 
 @mixin MediumLaptop {
-
   @media screen and (max-width: 102.6rem) {
     @content;
   }
 }
 
 @mixin MidMedLaptop {
-
   @media screen and (max-width: 115rem) {
     @content;
   }
@@ -77,7 +75,6 @@
     @content;
   }
 }
-
 
 @mixin BigLaptop {
   @media screen and (max-width: 134rem) {
