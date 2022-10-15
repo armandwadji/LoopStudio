@@ -105,7 +105,7 @@
         // *******************
 
         @include MidMedium {
-          visibility: hidden;
+          display: none;
         }
       }
 
@@ -113,16 +113,19 @@
         position: absolute;
         left: 0;
         top: 50%;
-        transform: translate(-100vw, -50%);
         visibility: hidden;
+        opacity: 0;
+        transform: translate(-100vw, -50%);
         transition: 0.25s ease-in-out;
 
         &.show {
           visibility: visible;
+          opacity: 1;
           transform: translate(0, -50%);
 
           @include MidMedium {
             visibility: visible;
+            transform: translate(0, 0);
           }
         }
 
@@ -130,6 +133,8 @@
           visibility: visible;
           position: static;
           display: flex;
+          opacity: 1;
+          transform: translate(0);
 
           & > :not(:last-child) {
             margin-inline-end: 3.2rem;

@@ -272,24 +272,27 @@ img {
 }
 @media screen and (min-width: 850px) {
   .hero .header__nav--toggleMenu {
-    visibility: hidden;
+    display: none;
   }
 }
 .hero .header__nav--menu {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translate(-100vw, -50%);
   visibility: hidden;
+  opacity: 0;
+  transform: translate(-100vw, -50%);
   transition: 0.25s ease-in-out;
 }
 .hero .header__nav--menu.show {
   visibility: visible;
+  opacity: 1;
   transform: translate(0, -50%);
 }
 @media screen and (min-width: 850px) {
   .hero .header__nav--menu.show {
     visibility: visible;
+    transform: translate(0, 0);
   }
 }
 @media screen and (min-width: 850px) {
@@ -297,6 +300,8 @@ img {
     visibility: visible;
     position: static;
     display: flex;
+    opacity: 1;
+    transform: translate(0);
   }
   .hero .header__nav--menu > :not(:last-child) {
     -webkit-margin-end: 3.2rem;
