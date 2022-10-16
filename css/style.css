@@ -642,7 +642,7 @@ img {
   height: 2.4rem;
 }
 .footer--right p {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   opacity: 0.5;
 }
