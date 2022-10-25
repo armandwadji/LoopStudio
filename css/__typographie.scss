@@ -1,44 +1,36 @@
 //   TYPOGRAPHIE
-body{
-    
-    font-family: 'Alata', sans-serif;
-    font-size: 1.5rem;
-	font-weight: 400;
-	line-height: calc(25 / 15);
-
+body {
+  font-family: "Alata", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: calc(25 / 15);
 }
 
 :is(h1, h2, h3) {
-    font-family: 'Josefin Sans', serif;
-    font-size: 4rem;
-    font-weight: 300;
-    line-height: calc(38 / 40);
-    text-transform: uppercase;
+  font-family: "Josefin Sans", serif;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: calc(38 / 40);
+  text-transform: uppercase;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-// h2{
-//     text-align: center;
-// };
-
-img{
-    display: block;
-};
+img {
+  display: block;
+}
 
 .container {
-    position: relative;
-    margin-inline: clamp(2.4rem, calc(-2.2rem + 13vw), 16.5rem) ;
-    max-width: calc(1px * (1111 )); 
-    height: 100%;
+  position: relative;
+  margin-inline: clamp(2.4rem, calc(-2.2rem + 13vw), 16.5rem);
+  max-width: calc(1px * (1111));
+  height: 100%;
 
-    @include VeryBigLaptop  {
-        margin-inline: auto;
-    }
-
-    
+  @include VeryBigLaptop {
+    margin-inline: auto;
+  }
 }
 // *************************************
