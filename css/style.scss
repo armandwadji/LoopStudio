@@ -58,7 +58,7 @@
         height: 8rem;
         position: relative;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
@@ -141,7 +141,7 @@
         }
 
         .menu-item {
-          font-family: "Josefin Sans", sans-serif;
+          font-family: "Alata", sans-serif;
           font-size: 2.4rem;
           line-height: 2.5rem;
           text-transform: uppercase;
@@ -484,15 +484,16 @@
       position: absolute;
       height: 0.2rem;
       width: 2.4rem;
-      bottom: -0.8rem;
+      top: calc(100% + 0.4rem);
       left: 50%;
       background-color: $white;
-      transform: translateX(-50%) scaleX(0%);
-      transform-origin: left center;
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: right center;
       transition: transform 0.3s ease-in-out;
     }
 
     &:hover::after {
+      transform-origin: left center;
       transform: translateX(-50%) scaleX(100%);
     }
   }
